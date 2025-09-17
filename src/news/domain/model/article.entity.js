@@ -16,7 +16,7 @@ export class Article {
         this.publishedAt = new Date(publishedAt);
     }
 
-    getFormattedDate() {
+    getFormattedPublishedAt() {
         return this.publishedAt.toLocaleDateString('en-US', {
             year: 'numeric',
             month: '2-digit',
