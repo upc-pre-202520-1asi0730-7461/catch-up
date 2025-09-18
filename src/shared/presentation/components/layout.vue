@@ -26,6 +26,7 @@ const setSource = source => {
 
 onMounted(() => {
   newsStore.loadSources();
+  articles = computed(() => newsStore.articles);
   rerenderKey.value += 1;
 })
 
@@ -48,7 +49,7 @@ onMounted(() => {
     </div>
   </div>
   <div>
-    <article-list v-if="articles" v-model:articles="articles" :key="rerenderKey"/>
+    <article-list v-if="articles.length > 0" v-model:articles="articles" :key="rerenderKey"/>
   </div>
   <footer-content></footer-content>
 </template>

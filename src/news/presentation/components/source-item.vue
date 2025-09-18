@@ -1,9 +1,9 @@
 <script setup lang="js">
-  import {Source} from "../../domain/model/source.entity.js";
+import {Source} from "../../domain/model/source.entity.js";
 
-  const props = defineProps({ source: { type: Source, required: true } });
+const props = defineProps({ source: { type: Source, required: true } });
   const emit = defineEmits(['source-selected']);
-
+  const { source } = props;
   function emitSourceSelectedEvent() {
     emit('source-selected', props.source);
   }

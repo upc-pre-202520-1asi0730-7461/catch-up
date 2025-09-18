@@ -1,8 +1,8 @@
 <script setup lang="js">
-  import {Source} from "../../domain/model/source.entity.js";
-  import SourceItem from "./source-item.vue";
+import {Source} from "../../domain/model/source.entity.js";
+import SourceItem from "./source-item.vue";
 
-  const props = defineProps({ visible: Boolean, sources: Array[Source]});
+const props = defineProps({ visible: Boolean, sources: Array[Source]});
   const emit = defineEmits(['source-selected']);
 
   function emitSourceSelectedEvent(source) {

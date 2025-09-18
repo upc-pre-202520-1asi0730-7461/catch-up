@@ -1,8 +1,8 @@
 <script setup lang="js">
-  import {useI18n} from "vue-i18n";
-  import {Article} from "../../domain/model/article.entity.js";
+import {useI18n} from "vue-i18n";
+import {Article} from "../../domain/model/article.entity.js";
 
-  const { t } = useI18n();
+const { t } = useI18n();
 
   const props = defineProps({ article: { type: Article, required: true } });
   const { article } = props;
